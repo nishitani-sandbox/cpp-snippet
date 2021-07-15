@@ -23,6 +23,7 @@ int main()
   S b = a;
   std::cout << "b.i: " << b.i << "\n"s;
   // S c() does not work!
+  // S c = S() works!
   S c;
   c.i = 3;
   std::cout << "c.i: " << c.i << "\n"s;
