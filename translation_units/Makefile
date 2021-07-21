@@ -1,0 +1,16 @@
+gcc_options = -std=c++17 -Wall --pedantic-error
+
+program: main.cpp foo.cpp bar.cpp all.h all.h.gch
+	g++ $(gcc_options) -include all.h $< foo.cpp bar.cpp -o $@ -lstdc++fs
+
+all.h.gch: all.h
+	g++ $(gcc_options) -x c++-header -o $@ $<
+
+run: program
+	./program
+
+clean:
+	rm -f ./program
+	rm -f ./all.h.gch
+
+.PHONY: run clean
