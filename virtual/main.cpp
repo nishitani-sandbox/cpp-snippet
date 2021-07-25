@@ -1,7 +1,7 @@
 class A
 {
   public:
-    virtual void foo() { std::cout << "called by A\n"s; }
+    virtual void foo() = 0;
 };
 
 class B : public A
@@ -10,10 +10,19 @@ class B : public A
     void foo() { std::cout << "called by B\n"s; }
 };
 
+class C : public B
+{
+  public:
+    void foo() { std::cout << "called by C\n"s; }
+};
+
 int main()
 {
-  B b;
-  A a = b;
+  C c;
+  B b = c;
+  A* a = &b;
+
+  c.foo();
   b.foo();
-  a.foo();
+  a->foo();
 }
