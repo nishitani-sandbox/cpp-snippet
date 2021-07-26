@@ -8,6 +8,7 @@ class A
 class B : public A
 {
   public:
+    // void foo() { std::cout << "called by B\n"s; } also OK
     virtual void foo() { std::cout << "called by B\n"s; }
 };
 
