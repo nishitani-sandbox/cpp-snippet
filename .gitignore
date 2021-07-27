@@ -1,4 +1,6 @@
 program
+hello_test
 all.h.gch
 *.o
+*result.xml
 .vscode
