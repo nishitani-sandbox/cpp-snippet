@@ -1,1 +1,2 @@
-int foo();
+int foo1();
+int foo2();
