@@ -1,7 +1,7 @@
 gcc_options = -std=c++17 -Wall
 
 hello_test: hello_test.cpp
-	g++ $(gcc_options) -I ../third_party/googletest/googletest/include -include all.h -L ../lib -lgtest_main -lgtest -lpthread $< -o $@
+	g++ $(gcc_options) -I ../third_party/googletest/googletest/include -I ../third_party/googletest/googlemock/include -L ../lib -lgtest_main -lgtest -lpthread $< -o $@
 
 all.h.gch: all.h
 	g++ $(gcc_options) -x c++-header -o $@ $<
