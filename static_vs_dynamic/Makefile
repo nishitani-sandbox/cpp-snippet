@@ -19,7 +19,7 @@ clean:
 	rm -f static_last
 
 exe_static_first: shared_libfoo shared_libbar static_libfoo
-	g++ -Wall -Werror -o static_first main.cpp -L $(PWD)/lib -L $(PWD)/shared_bar -L $(PWD)/shared_foo -l:libfoo.a -l:libbar.so -l:libfoo.so
+	g++ -Wall -Werror -o static_first main.cpp -L $(PWD)/lib -L $(PWD)/shared_bar -L $(PWD)/shared_foo -l:libbar.so -l:libfoo.a -l:libfoo.so
 	LD_LIBRARY_PATH="$(PWD)/shared_bar:$(PWD)/shared_foo" ./static_first
 
 exe_static_last: shared_libfoo shared_libbar static_libfoo

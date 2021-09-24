@@ -2,5 +2,5 @@
 
 std::string foo()
 {
-	return "FOO";
+	return "static_foo";
 }

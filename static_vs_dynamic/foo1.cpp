@@ -2,5 +2,5 @@
 
 std::string foo()
 {
-	return "foo";
+	return "dynamic_foo";
 }
