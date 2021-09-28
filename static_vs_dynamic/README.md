@@ -1,3 +1,4 @@
 - https://stackoverflow.com/a/492498
 - https://stackoverflow.com/a/30080881
 - https://www.cs.dartmouth.edu/~sergey/cs258/ABI/UlrichDrepper-How-To-Write-Shared-Libraries.pdf
+- https://docs.oracle.com/cd/E19683-01/817-3677/6mj8mbtb7/index.html#chapter2-5
